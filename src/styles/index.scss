@@ -39,7 +39,7 @@ body {
   @include desktop() {
     align-self: center;
   }
-  
+
   &::before {
     opacity: 0.2;
   }
@@ -102,7 +102,7 @@ body {
   grid-area: logos;
   align-self: center;
   justify-self: center;
-  
+
   @include desktop() {
     justify-self: left;
   }

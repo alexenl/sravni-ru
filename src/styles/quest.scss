@@ -151,7 +151,7 @@
       font-weight: 600;
 
       opacity: 1;
-      
+
       @include desktop() {
         color: var(--color-text-red);
         font-weight: 400;

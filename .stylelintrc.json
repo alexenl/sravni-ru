@@ -7,9 +7,6 @@
     "stylelint-order"
   ],
   "rules": {
-    "no-eol-whitespace": [true, 
-      { "ignore": ["empty-lines"] }
-    ],
     "declaration-empty-line-before": null,
     "plugin/rational-order": [
       true, {
