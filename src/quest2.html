@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+
+<body>
+  <div class="mobile-header-bg"></div>
+
+  <div class="grid">
+    <header class="logos">
+      <a href="https://www.sravni.ru/" target="_blank" class="logos__logo-sravni">
+        <img src="<%=require('./images/logo-sravni.svg')%>" alt="На главную Sravni.ru">
+      </a>
+      <img src="<%=require('./images/logo-halva.svg')%>" alt="Халва">
+    </header>
+
+    <div class="return-block">
+      <a href="./index.html" class="return-block__link">Вернуться на главную</a>
+    </div>
+
+    <main class="question">
+      <article>
+        <form action="">
+          <h1 class="question__header"><legend>Представьте, вам заплатили премию, как вы её потратите?</legend></h1>
+
+          <p class="question__option">
+            <input type="radio" id="choise1" name="question2" value="choise1">
+            <label for="choise1">
+              Поищу, куда выгоднее вложить деньги
+            </label>
+          </p>
+
+          <p class="question__option">
+            <input type="radio" id="choise2" name="question2" value="choise2">
+            <label for="choise2">
+              Внесу досрочный платёж по кредиту
+            </label>
+          </p>
+
+          <p class="question__option">
+            <input type="radio" id="choise3" name="question2" value="choise3">
+            <label for="choise3">
+              Пока что не знаю. Потрачу с удовольствием для себя
+            </label>
+          </p>
+
+          <p class="question__option">
+            <input type="radio" id="choise4" name="question2" value="choise4">
+            <label for="choise4">
+              Оплачу отдых своим близким
+            </label>
+          </p>
+
+          <button type="submit" class="question__button button" disabled>Следующий вопрос</button>
+        </form>
+      </article>
+    </main>
+
+    <div class="big-image">
+      <img src="<%=require('./images/q-2.svg')%>" alt="Картинка">
+    </div>
+
+    <div class="counter counter--line">
+      2 вопрос <span class="counter__amount">из 10</span>
+    </div>
+
+    <div class="counter counter--with-dots">
+      Вопрос 2/10
+      <div class="counter__dots">
+        <div class="counter__dot counter__dot--fill"></div>
+        <div class="counter__dot counter__dot--fill"></div>
+        <div class="counter__dot"></div>
+        <div class="counter__dot"></div>
+        <div class="counter__dot"></div>
+        <div class="counter__dot"></div>
+        <div class="counter__dot"></div>
+        <div class="counter__dot"></div>
+        <div class="counter__dot"></div>
+        <div class="counter__dot"></div>
+      </div>
+    </div>
+
+    <div class="share share--grey">
+      Рассказать друзьям
+      <div class="share__links">
+        <a href="#" class="share__link">
+          <img src="<%=require('./images/icon-telegram.svg')%>" alt="Расшарить в телеграмме">
+        </a>
+        <a href="#" class="share__link">
+          <img src="<%=require('./images/icon-facebook.svg')%>" alt="Расшарить в фейсбуке">
+        </a>
+        <a href="#" class="share__link">
+          <img src="<%=require('./images/icon-vk.svg')%>" alt="Расшарить в вконтакте">
+        </a>
+        <a href="#" class="share__link">
+          <img src="<%=require('./images/icon-twitter.svg')%>" alt="Расшарить в твиттере">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

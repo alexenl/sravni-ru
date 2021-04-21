@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+<body>
+
+  <div class="gradient-bg"></div>
+  <div class="mobile-header-bg"></div>
+
+  <div class="grid">
+    <header class="logos">
+      <a href="https://www.sravni.ru/" target="_blank" class="logos__logo-sravni">
+        <img src="<%=require('./images/logo-sravni.svg')%>" alt="На главную Sravni.ru">
+      </a>
+      <img src="<%=require('./images/logo-halva.svg')%>" alt="Халва">
+    </header>
+
+    <div class="big-image">
+      <img src="<%=require('./images/buntar.svg')%>" alt="Картинка">
+    </div>
+
+    <main class="result">
+      <article>
+        <h1 class="result__header">Поздравляем, вы <span class="color-accent">бунтарь</span></h1>
+        <p class="result__portrait">Бунтарь – самый непредсказуемый архетип. Он часто меняет выбранную стратегию и больше подвержен своим эмоциям и ощущениям. Бунтари не выносят давления и часто идут от обратного: если Бунтарь получает совет, он всё равно действует по-своему, опираясь на своё мироощущение.</p>
+
+        <div class="result__block">
+          <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M36.6 17.39a1.11 1.11 0 00-1.04-.72H22.14l7.74-15.05A1.1 1.1 0 0028.16.27L20 7.32 3.72 21.38a1.11 1.11 0 00.72 1.95h13.42l-7.74 15.05a1.1 1.1 0 001.72 1.35L20 32.68l16.28-14.06a1.11 1.11 0 00.32-1.23z" fill="#FFAC33"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h40v40H0z"/></clipPath></defs></svg>
+          <p class="result__block__header">Финансовая <span class="color-accent">сила</span></p>
+          <p class="result__block__description"><span class="color-accent">Сила Бунтарей в их независимости.</span> Часто представители этого архетипа не ориентируются на модные тенденции, они пользуются исключительно тем, что приносит им удовольствие и яркие эмоции. Бунтарь не боится тратить деньги и чаще делает это с максимальной пользой для себя.</p>
+        </div>
+
+        <div class="result__block">
+          <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.95 38.89c-2.05 0-2.95-1.49-2-3.3l17.33-33.4c.95-1.82 2.5-1.82 3.43 0l17.35 33.4c.94 1.81.04 3.3-2 3.3H2.94z" fill="#FFCC4D"/><path d="M17.31 32.17a2.69 2.69 0 115.38 0 2.69 2.69 0 01-5.38 0zm.21-20.33c0-1.44 1.07-2.34 2.48-2.34 1.38 0 2.48.93 2.48 2.34v13.27c0 1.41-1.1 2.34-2.48 2.34-1.41 0-2.48-.9-2.48-2.34V11.84z" fill="#231F20"/></svg>
+          <p class="result__block__header">Финансовая <span class="color-accent">слабость</span></p>
+          <p class="result__block__description"><span class="color-accent">Основная проблема Бунтарей — изменчивость их настроения.</span> Порой эмоциональные колебания приводят к необдуманным тратам, а они в свою очередь к долгам. Импульсивные покупки и принятие решений «сгоряча» — яркая черта Бунтарей.  Этот архетип живет здесь и сейчас, ему проще найти возможность купить, чем отказать себе в желаемом. Злейший враг Бунтаря — кредитные карты. Забудьте о них навсегда</p>
+        </div>
+
+        <div class="result__block">
+          <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32.07 7.93c8.18 8.17 10.4 19.22 4.94 24.67-5.45 5.46-16.5 3.25-24.68-4.93-.28-.28-.53-.57-.8-.85l4.91-4.91c6.36 6.36 14.47 8.57 18.1 4.94 3.63-3.64 1.42-11.74-4.94-18.1l.03.02-.02-.02C22.34 1.48 12.39-.36 7.4 4.63c-2.42 2.42-3.22 6-2.6 9.86C3.85 9.96 4.63 5.75 7.4 3c5.45-5.45 16.5-3.24 24.67 4.94z" fill="#FDD888"/><path d="M21.56 37.78c-.28 0-.56-.09-.8-.26l-5.64-4.04-5.64 4.04a1.36 1.36 0 01-2.1-.68c-.09-.28-.09-.57 0-.85l2.1-6.78-5.59-3.94a1.37 1.37 0 01.8-2.48l6.83-.01 2.3-6.62a1.37 1.37 0 012.6 0l2.07 6.62 7.06.01a1.37 1.37 0 01.8 2.48l-5.59 3.94 2.1 6.78a1.37 1.37 0 01-1.3 1.79z" fill="#FFAC33"/></svg>
+          <p class="result__block__header">Финансовый <span class="color-accent">совет</span></p>
+          <p class="result__block__description">Комиссия по многим кредиткам достигает 25-30%. Клиент оплачивает её, если выходит за пределы установленного грейс-периода. Ситуация ухудшается, когда банк постоянно увеличивает кредитный лимит, погружая Бунтаря всё глубже в долговую яму, выход из которой – другой кредит.</p>
+          <p class="result__block__description">Специально для тех Бунтарей, кто не вписался в свой персональный ежемесячный максимум трат <span class="color-accent">по карте беспроцентной рассрочки «Халва»</span>, существует опция «Минимальный платёж».</p>
+          <p class="result__block__additional">Ежемесячный платёж по карте рассрочки «Халва» можно снизить до 1/18 задолженности за небольшую комиссию 2,9%+290 рублей, которая будет включена в следующий платёж. Этот инструмент поможет быстро выйти из сложной финансовой ситуации.</p>
+        </div>
+
+        <div class="share share--red">
+          Рассказать друзьям
+          <div class="share__links">
+            <a href="#" class="share__link">
+              <img src="<%=require('./images/icon-telegram.svg')%>" alt="Расшарить в телеграмме">
+            </a>
+            <a href="#" class="share__link">
+              <img src="<%=require('./images/icon-facebook.svg')%>" alt="Расшарить в фейсбуке">
+            </a>
+            <a href="#" class="share__link">
+              <img src="<%=require('./images/icon-vk.svg')%>" alt="Расшарить в вконтакте">
+            </a>
+            <a href="#" class="share__link">
+              <img src="<%=require('./images/icon-twitter.svg')%>" alt="Расшарить в твиттере">
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <a href="./index.html" class="again-link">Пройти тест ещё раз</a>
+        </div>
+
+      </article>
+    </main>
+
+  </div>
+  
+</body>
+</html>

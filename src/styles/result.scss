@@ -1,0 +1,169 @@
+@import './base.scss';
+
+body {
+  background: url('../images/bg-columns.png');
+}
+
+.gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100vw;
+  height: 35vh;
+
+  background: linear-gradient(180deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
+
+  @include desktop() {
+    max-height: 340px;
+  }
+}
+
+.color-accent {
+  color: var(--color-text-red);
+}
+
+.mobile-header-bg {
+  background-color: rgba(#ff4e50, 0.5);
+}
+
+.big-image {
+  img {
+    height: 375px;
+
+    @include desktop() {
+      height: 540px;
+    }
+  }
+
+  &::before {
+    content: none;
+  }
+}
+
+.grid {
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: var(--padding-mobile);
+
+  @include desktop() {
+    padding-bottom: 100px;
+  }
+}
+
+.logos {
+  justify-content: center;
+}
+
+.result {
+  text-align: center;
+
+  &__header {
+    margin: 0;
+
+    color: var(--color-text-grey);
+    font-weight: 700;
+    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 30px;
+  }
+
+  &__portrait {
+    margin-top: 15px;
+
+    color: var(--color-text-grey);
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  @include desktop() {
+    &__header {
+      font-size: 50px;
+      line-height: 56px;
+    }
+
+    &__portrait {
+      margin-top: 20px;
+    }
+  }
+
+  &__block {
+    margin-top: 30px;
+    padding: 30px;
+
+    color: var(--color-text-grey);
+    text-align: center;
+
+    background-color: #fff;
+    box-shadow: 0 5px 15px -5px #113c8f14, 0 -2px 4px -2px #113c8f0a;
+
+    &__header {
+      margin-top: 10px;
+
+      font-weight: 700;
+      font-size: 18px;
+      font-family: 'Ubuntu', sans-serif;
+      line-height: 22px;
+    }
+
+    &__description {
+      margin-top: 15px;
+
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__additional {
+      color: #8c8c8c;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    @include desktop() {
+      &__header {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      &__description {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.share {
+  margin-top: 30px;
+
+  &__links {
+    justify-content: center;
+  }
+
+  @include desktop() {
+    margin-top: 40px;
+  }
+}
+
+.again-link {
+  display: none;
+  margin-top: 40px;
+
+  color: var(--color-text-red);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+
+  text-decoration: none;
+
+  border-bottom: 2px solid currentColor;
+
+  @include desktop() {
+    display: inline-block;
+  }
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}

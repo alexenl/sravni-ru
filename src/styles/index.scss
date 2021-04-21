@@ -1,0 +1,113 @@
+@import './base.scss';
+
+body {
+  background: linear-gradient(180deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "logos"
+    "image"
+    "content"
+    "share";
+  grid-template-columns: 1fr;
+
+  padding: var(--padding-mobile);
+  padding-top: 0;
+
+  @include desktop() {
+    grid-template-areas:
+      "logos   image"
+      "content   image"
+      "share   image";
+    grid-template-rows: 150px 1fr min-content;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 90px 60px;
+
+    column-gap: 80px;
+  }
+}
+
+.big-image {
+  grid-area: image;
+  align-self: start;
+  justify-self: center;
+
+  @include desktop() {
+    align-self: center;
+  }
+  
+  &::before {
+    opacity: 0.2;
+  }
+}
+
+.content {
+  grid-area: content;
+
+  text-align: center;
+
+  &__header {
+    margin: 0;
+
+    color: var(--color-text-white);
+    font-weight: 700;
+    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 30px;
+  }
+
+  &__text {
+    margin-top: 15px;
+
+    color: var(--color-text-white);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &__button {
+    margin-top: 30px;
+  }
+
+  @include desktop() {
+    text-align: left;
+
+    &__header {
+      font-size: 50px;
+      line-height: 56px;
+    }
+
+    &__text {
+      margin-top: 30px;
+    }
+  }
+}
+
+.share {
+  grid-area: share;
+  align-self: end;
+  justify-self: center;
+  margin-top: 30px;
+
+  @include desktop() {
+    justify-self: start;
+  }
+}
+
+.logos {
+  grid-area: logos;
+  align-self: center;
+  justify-self: center;
+  
+  @include desktop() {
+    justify-self: left;
+  }
+}
+
+.mobile-header-bg {
+  background-color: rgba(255, 255, 255, 0.5);
+}
